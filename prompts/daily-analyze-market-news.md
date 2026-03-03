@@ -1,28 +1,57 @@
-Give me a quick update as I start my work day, keep the updates locked to just what happened in the last 24 hours.
+# Daily Market News Analysis
 
-## Context
+Analyze the latest macroeconomic and financial news from reputable sources.
+Prioritize items published or updated in the last 24-48 hours.
 
-I am interested in important and recent world events, business updates, extreme weather events, sports recent results and highlights and so use this context to make the below instructions more relevant for me in terms of details and research.
+## Scope
 
-## Instructions
+- Equities: S&P 500, NASDAQ 100, Dow, Russell 2000, Nikkei 225, S&P/ASX 200, China A50, Hang Seng, MSCI Singapore, EURO STOXX 50, DAX, CAC 40, AEX, FTSE 100
+- Commodities: WTI, Brent, Gold, Silver, Copper, Platinum, NatGas
+- Macro/FX: UST yields, DXY, VIX, USD/JPY, EUR/USD
 
-- ONLY include news for today, from the past 24 hours.
-- What are the top headlines on the news? ALWAYS provide links that lead directly to the referenced articles, not the landing page. Extract the article's title and a direct link to the source. If you don't include raw links then I can't trust the source of information.
-- Reread your output and append the article links and the actual article dates so i can read more if I want to like this [date of article] - link.
-- Keep the news straight, stick to the facts, don't add any additional commentary or opinions.
-- Ensure the headlines are spaced out using separate bullet points to improve reader legibility and clarity.
-- Format it beautifully, space it out with new lines and use all things rich text. Include emojis beside each heading. The emojis should reflect what is included in each header beside it.
-- Do not include any introductory phrases, conversational text, or preamble before the list of headlines.
-- Exclude all non-essential information from the output, such as dates, timestamps, or personal greetings.
-- Exclude redundant headlines.
+## For each category (Equities / Commodities / Macro&FX), do exactly
 
-## Output
+1. Key drivers (2-4): the freshest catalysts (data prints, central banks, geopolitics, positioning, market microstructure).
+2. Why it matters: one line per driver linking to price action/mechanism (e.g., `高インフレ -> 実質金利↑ -> 金下押し`).
+3. 24h outlook: Bias = {Bullish | Bearish | Sideways}. Add 2–3 critical levels or events (exact times in JST).
+4. Confidence: 0-5. Add 1 alternate scenario (what flips the bias).
 
-Use headers, bolding, spacing, line breaks, emojis and links to make the output look great.
-Links should have the label "link" not the full URL as the label.
+## Output requirements
 
-## Output Example
+- Keep tone factual, neutral, and concise.
+- Use headers, bolding, spacing, line breaks, emojis and links to make the output look great.
+- Include direct links to sources for each item.
+- Add blank lines between items for readability.
+- Translate the analysis results to Japanese for the final output.
 
-**Today's Top News**:
+## Output structure example
 
-**Brief Headline** - Sentence summary - <link>
+**Daily Market News Analysis** (YYYY-MM-DD HH:MM JST)
+
+📈 **Equities**
+
+Key drivers (2-4):
+
+- {Driver 1}: [Primary source](https://example.com/source-1)
+- {Driver 2}: [Primary source](https://example.com/source-2)
+
+Why it matters:
+
+- {Driver 1} -> {Mechanism} -> {Price action}
+- {Driver 2} -> {Mechanism} -> {Price action}
+
+24h outlook:
+
+- Bias: Bullish | Bearish | Sideways
+
+Critical levels / events (JST):
+
+- {Asset}: {Support} / {Resistance}
+- {HH:MM JST} {Event}
+
+Confidence:
+
+- {0-5} / 5
+- Alternate scenario: {What changes the bias}
+
+...
